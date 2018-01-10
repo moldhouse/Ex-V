@@ -277,12 +277,14 @@ INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/jknappen/ec/ecbx1095.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
+INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
-INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
@@ -309,8 +311,8 @@ INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm
 OUTPUT Ex_Zusammenfassung.pdf
 INPUT /usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
-INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/jknappen/ec/ecrm0800.tfm
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/jknappen/ec/ecrm0600.tfm
 INPUT images/ewald-kugel.png
 INPUT ./images/ewald-kugel.png
 INPUT ./images/ewald-kugel.png
@@ -320,8 +322,6 @@ INPUT ./images/spezifische.png
 INPUT images/umklapp.png
 INPUT ./images/umklapp.png
 INPUT ./images/umklapp.png
-INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/jknappen/ec/ecrm0800.tfm
-INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/jknappen/ec/ecrm0600.tfm
 INPUT images/spezifische2.png
 INPUT ./images/spezifische2.png
 INPUT ./images/spezifische2.png

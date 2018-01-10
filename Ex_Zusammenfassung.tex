@@ -107,6 +107,10 @@ in gemischter Form.
   den Atomrümpfen und ermöglicht Leitfähigkeit
 \end{enumerate}
 \subsection{Van-der-Waals-Bindung}
+\begin{itemize}
+  \item Relevanz: neutrale Atome
+  \item Schwach: $\sim$ 0.1eV/Atom
+\end{itemize}
 Wir addieren das anziehende Van-der-Waals-Potential zum abstoßenden Term durch
 das Pauli-Prinzip und erhalten das Lennart-Jones-Potential:
 \begin{equation}
@@ -123,7 +127,7 @@ Für die Bindungsenergie ergibt sich:
 Wenn wir die Ionen als geladenen Kugeln betrachten ergibt sich für die
 Bindungsenergie:
 \begin{equation}
-  \phi = -\frac{e^2}{4\pi\varepsilon_0}
+  \phi = -\frac{e^2}{4\pi\varepsilon_0}\sim3-10\frac{eV}{Atom}
 \end{equation}
 Da die Ionen mit allen Nachbarn wechselwirken, erwarten wir im Festkörper
 eine noch stärkere Bindung.
@@ -136,8 +140,8 @@ erwarten würde. Für den nicht-bindenden Zustand ist sie null.
 \subsection{Hybridorbitale}
 Freie Kohlenstoffatome besitzen die Elektronenkonfiguration $1s^2 2s^2 2p^2$.
 Zunächst erfolgt ein Übergang von der Konfiguration $2s^2 2p^2$ zu $2s 2p_x 2p_y
- 2p_z$, was energeitsch ungünstiger ist. Nun bilden sich aus den
-Wellenfunktionen Linearkombinationen, die einen optimalen Überlabb mit
+ 2p_z$, was energetisch ungünstiger ist. Nun bilden sich aus den
+Wellenfunktionen Linearkombinationen, die einen optimalen Überlapp mit
 benachbarten Atomen ermöglichen. Die frei werdende Bindungsenergie kompensiert
 den anfänglichen Energieverlust. Durch die lineare Überlagerung lassen sich
 vier gleichwertige Wellenfunktionen definieren, die vom Zentrum eines Tetraeders
@@ -149,39 +153,51 @@ gleichmäßig über den Kristall verteilt.
 \subsection{Rotation}
 Für die Rotationszustände eines Moleküls gilt folgende Energie:
 \begin{equation}
-  E=\frac{J\cdot(J+1)\hbar^2}{2I}=hcBJ(J+1)
+  E=\frac{1}{2}I\omega^2=\frac{L^2}{2I}=\frac{J\cdot(J+1)\hbar^2}{2I}=hcBJ(J+1)
 \end{equation}
-mit dem Trägheitsmoment I und der sogennanten Rotationskonstante
+mit dem Trägheitsmoment
+\begin{equation}
+  I=\frac{m_1m_2}{m_1+m_2}R^2
+\end{equation}
+und der sogennanten Rotationskonstante
 \begin{equation}
   B=\frac{h}{8\pi^2cI}
 \end{equation}
 Für den Abstand zwischen zwei Rotationsniveaus $n, n+1$ gilt:
 \begin{equation}
-  \Delta E=(2+2n)hcB
+  \Delta E=(2+2n)hcB=(1+n)\frac{\hbar^2}{I}
 \end{equation}
 Er steigt also mit steigender Quantenzahl. Das Rotationsspektrum ist außerdem
 von den Übergangswahrscheinlichkeiten zwischen den Zuständen abhängig. Wenn
 diese ungefähr gleich sind, dan spiegeln die Intensitäten der Spektrallinien
 die Besetzungsdichten wieder. Diese ist proportional zur Boltzman-Statistik:
 \begin{equation}
-  W(J)=(2J+1)\cdot e^{-\frac{hcBJ(J+1)}{k_BT}}
+  \frac{\mu_j}{\mu_0}=(2J+1)\cdot e^{-\frac{hcBJ(J+1)}{k_BT}}
 \end{equation}
 Der Faktor (2J+1) ergibt sich, da es sich bei dem Zustand mit der Quantenzahl J
-eigentlich um (2J+1) Zustände handelt. Die Abstände zwischen den Spektrallinien
-sind dabei alle gleich, da gilt:
+eigentlich um (2J+1) Zustände handelt. Im unteren Bereich der Besetzung ist die
+Entartung dominant, im oberen Bereich der exponentielle Abfall. Die Abstände
+zwischen den Spektrallinien sind dabei alle gleich, da gilt:
 \begin{equation}
-  \Delta\Delta E=2hcB
+  \Delta\Delta E=2hcB=\frac{\hbar^2}{I}
 \end{equation}
-AUßerdem sind immer nur Übergänge zum nächstgelegenen Niveau möglich.
+Außerdem sind immer nur Übergänge zum nächstgelegenen Niveau möglich.
 
 \subsection{Vibration}
+Die Atome eines zweiatomigen, hantelförmigen Moleküls können auch gegeneinander
+schwingen. Die einfachste Näherung ist eine harmonische Schwingung. Für die
+Energieniveaus gilt:
+\begin{equation}
+  E_\mu=\hbar\omega_0\left(\mu+\frac{1}{2}\right)
+\end{equation}
+Die Auswahlregeln für den harmonischen Oszillator sind $\Delta\nu=\pm1$.
 Für die Kraftkonstante der Molekülbindung gilt:
 \begin{equation}
-  \mu=\frac{1}{2\pi}\sqrt{\frac{k}{\mu}}
+  \nu=\frac{1}{2\pi}\sqrt{\frac{k}{\mu}}
 \end{equation}
 \subsection{Elektronische Anregungen}
 Eine molekulare Schwingung wird angeregt, wenn das Molekül ein Quant mit der
-Energie $E=h\mu$ absorbiert. Der direkteste Weg den Schwingungszustand eines
+Energie $E=h\nu$ absorbiert. Der direkteste Weg den Schwingungszustand eines
 Moleküls zu untersuchen, ist mithilfe der Infrarotspektroslopie, denn die zur
 Anregung notwendige Energie entspricht bei den meisten Verbindungen der Energie
 eines Photons im Infrarotbereich. Wechselwirkung zwischen elektromagnetischer
@@ -208,6 +224,17 @@ Bei einem Schwingungsübergang ändern sich also gleichzeitig die
 Rotationsübergänge um $\Delta J\pm1$. Wenn $\Delta J=+1$, spricht man vom
 R-Zweig. Bei $\Delta J=-1$ spricht man vom P-Zweig. Übergänge mit $\Delta J=0$
 sind verboten und werden Q-Zweig genannt.
+Für die Frequenz eines Photons beim Übergang eines P-Zweiges gilt:
+\begin{equation}
+  \omega_P=\frac{E_{1,j-1}-E_{0,j}}{\hbar}=\omega_0+
+  [J(J-1)-J(J+1)]\frac{\hbar^2}{2I}=\omega_0-\frac{J\hbar^2}{I}
+\end{equation}
+Bei einem Übergang des R-Zweiges ergibt sich:
+\begin{equation}
+  \omega_R=\frac{E_{1,j+1}-E_{0,j}}{\hbar}=\omega_0+[(J+1)(J+2)-J(J+1)]=
+  \omega_0+(J+1)\frac{\hbar^2}{I}
+\end{equation}
+
 \section{Struktur von Festkörpern}
 Kristalle zeichnen sich durch Translationssymmetrie aus:
 \begin{equation}
@@ -236,6 +263,10 @@ Ihre Basisvektoren erlauben nicht, alle äquivalenten Raumpunkte zu erreichen.
 Diese unterscheiden sich durch Zahl und Anordnung der Gitterpunkte und somit
 auch durch ihre Packungsdichte. Die Kantenlänge des Würfels ist die
 Gitterkonstante a.
+Für die Packungsdichte gilt:
+\begin{equation}
+  P=\frac{N\cdot V_{\text{Atom}}}{V_{\text{Elementarzelle}}}
+\end{equation}
 \subsubsection{Simple cubic}
 \begin{itemize}
   \item Sechs nächste Nachbarn im Abstand a
@@ -250,7 +281,14 @@ Gitterkonstante a.
   \item Die kubische Elementarzelle enthält vier Gitterpunkte
   \item Zwölf nächste Nachbarn im Abstand $\frac{a}{\sqrt{2}}$
   \item Sechs übernächste Nachbarn im Abstand a
-  \item Packungsdichte von 0.74 (maximal)
+  \item Packungsdichte von 0.74 (maximal). Es befinden sich 4 Kugeln in der
+  Elementarzelle. Der größtmögliche Radius um die Atome ist $r=\frac{\sqrt{2}a}
+  {4}$ und das Volumen der Elementarzelle ist $a^3$. Es folgt:
+  \begin{equation}
+    P=\frac{N\cdot\frac{4}{3}\pi r^3}{a^3}=
+    \frac{4\cdot\frac{4}{3}\pi\left(\frac{\sqrt{2}a}{4}\right)^3}{a^3}
+    \approx 0.7405
+  \end{equation}
   \item Man könnte statt der kubischen (nicht primitiven) Elementarzelle auch
   einen Rhomboeder mit Kantenlänge $\frac{a}{\sqrt{2}}$ wählen, um eine
   primitive Einheitszelle zu bekommen.
@@ -288,10 +326,10 @@ dagegen zur Untersuchung massiver Festkörper, da die Neutronen bei Atomen ohne
 magnetisches Moment ausschließlich an den Kernen gestreut werden. \textbf{
 Beugung} ist besonders dann stark ausgeprägt, wenn die Lichtwellenlänge und die
 charakteristische Länge des zu untersuchenden Objekts gleich lang sind.
-Setzen wir eine Wellenlänge von 1 $\dot{A}$ voraus, ergibt sich:
+Setzen wir eine Wellenlänge von 1 $\mathring{A}$ voraus, ergibt sich:
 \begin{equation}
   E = \frac{p^2}{2m} = \frac{\hbar^2}{2\lambda^2m} = \frac{\hbar^2}{2
-  \mathring{A}m}
+  \mathring{A}^2m}
 \end{equation}
 Somit haben Neutronen bei dieser Wellenlänge eine deutlich geringere Energie
 als Lichtquanten oder Elektronen. Die Information über die Verteiung der
@@ -303,7 +341,7 @@ wobei $\rho(r)$ die Streudichteverteilung ist und $\bm{K}=\bm{k}-\bm{k}_0$
 der Streuvektor ist. Somit lässt dich über eine Fouriertransformation aus der
 Streudichteverteilung der Streuvektor rekonstruieren. Wir schreiben nun:
 \begin{equation}
-  \rho(r)=\sum_{h,k,l}\rho_{hkl}e^{i\bm{G}_{hkl}\cdot\bm{r}}
+  \rho(\bm{r})=\sum_{h,k,l}\rho_{hkl}e^{i\bm{G}_{hkl}\cdot\bm{r}}
 \end{equation}
 Für $G_{hkl}$ gilt weiter:
 \begin{equation}
@@ -312,7 +350,7 @@ Für $G_{hkl}$ gilt weiter:
 Die Vektoren $\bm{b}_1, \bm{b}_2, \bm{b}_3$ legen nun ein neues,
 schiefwinkliges Koordinatensystem fest. Aus der Bedingung
 \begin{equation}
-  \rho{\bm{r}}=\rho{\bm{r}+\bm{R}}
+  \rho(\bm{r})=\rho()\bm{r}+\bm{R})
 \end{equation}
 folgt:
 \begin{equation}
@@ -337,7 +375,7 @@ Gitterdynamik. Brillouin-Zonen höherer Ordnung erhält man, indem man die
 nächsten Nachbarn gegen weiter entfernte tauscht.
 \subsection{Millersche Indize}
 Wir betrachten eine Gitterebene, deren Achsenabschnitte wir in Einheiten
-der Basisvektoren $a_i$ angeben. So erhalten wir beispielsweise 4, 2 und $infty$
+der Basisvektoren $a_i$ angeben. So erhalten wir beispielsweise 4, 2 und $\infty$
 (wenn kein Achsenabschnitt auftritt). Nun bilden wir die Kehrwerte und erhalten
 $\frac{1}{4}, \frac{1}{2}, 0$. Nun multiplizieren wir diese 3 Zahlen mit einem
 Faktor m, der so gewählt wird, dass sich 3 ganze Zahlen ergeben. In unserem
