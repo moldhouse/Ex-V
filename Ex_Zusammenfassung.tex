@@ -596,7 +596,7 @@ betrachten wir die Anzahl der Zustände zwischen $S(\omega)$ und $S(\omega+d
 Wir drücken das Volumenelement durch $d^3q=dq_\perp dS_\omega$ aus. Zum
 umformen von $dq_\perp$ benutzen wir die Definition der Gruppengeschwindigkeit.
 \begin{equation}
-  v_g=\abs{\frac{d\omega}{d\bm{q}}}=\abs{grad_\bm{q}\omega}=
+  v_g=\abs{\frac{d\omega}{d\bm{q}}}=\abs{grad_{\bm{q}}\omega}=
   \abs{\frac{d\omega}{dq_\perp}}
 \end{equation}
 und somit:
@@ -606,7 +606,7 @@ und somit:
 Für die Zustandsdichte folgt:
 \begin{equation}
   \mathcal{D}(\omega)d\omega=\rho_qd(\omega)\int_{w=const}\frac{dS_\omega}
-  {\abs{grad_\bm{q}\omega}}=
+  {\abs{grad_{\bm{q}}\omega}}=
   \frac{V}{(2\pi)^3}d\omega\int_{w=const}\frac{dS_\omega}{v_g}
 \end{equation}
 Bei isotropen Festkörpern ist die Fläche konstanter Frequenz im reziproken Raum
@@ -1075,7 +1075,178 @@ Gittervektor, dass die innerhalb der ersten Zone liegen:
 \centering
 \label{fig:bloch}
 \end{figure}
+\subsubsection{Energielücken}
+\paragraph{Anschaulich:} \noindent
+Bewegt sich ein Elektron mit Wellenvektor $\bm{k}$ entlang einer atomaren Kette,
+so wird es an jedem Atom gestreut. Erfüllt der Wellenvektor des Elektrons die
+Beugungsbedingung $\bm{K}=\bm{G}$, so erfährt das Elektron eine Bragg-Reflexion,
+bei der sich die Teilwellen konstruktiv überlagen. Da die reflektierte Welle in
+die andere Richtung läuft, gilt für den Streuvektor $\bm{K}=2\bm{k}$. Es folgt:
+\begin{equation}
+  k=\frac{K}{2}=\frac{G}{2}=\pm\frac{\pi}{a}
+\end{equation}
+Für die resultierende Wellenfunktion ergeben sich zwei Möglichkeiten.
+\begin{equation}
+  \begin{align}
+  \psi_s&\propto\left(e^{\frac{igx}{2}}+e^{\frac{-igx}{2}}\right)\propto\cos\left
+  (\frac{gx}{2}\right) \\
+  \psi_a&\propto\left(e^{\frac{igx}{2}}-e^{\frac{-igx}{2}}\right)\propto\sin\left
+  (\frac{gx}{2}\right)
+  \end{align}
+\end{equation}
+Daraus resultiert eine räumlich modulierte Ladungsdichte:
+\begin{equation}
+  \begin{align}
+  \rho_s &=e\abs{\psi_s}^2\propto\cos^2(\frac{\pi x}{a}) \\
+  \rho_a &=e\abs{\psi_a}^2\propto\sin^2(\frac{\pi x}{a})
+  \end{align}
+\end{equation}
+Eine laufende Welle hätte dagegen eine konstante Ladungsdichte. Bei der Lösung
+$\psi_s$ ist die dichte in Kernnähe gegenüber der laufenden Welle erhöht, bei
+$\psi_a$ reduziert sie sich (\ref{fig:ladungsdichte}). Ist das Potential in
+Kernnähe abgesenkt, so führt dies, im Vergleich zur laufenden Welle im
+symmetrischen Fall zu einer Absenkung, im antisymmetrischen Fall zu einer
+Anhebung der Elektronenenergie. Da die Schrödinger-Gleichung an der Zonengrenze
+zwei Lösungen mit unterschiedlicher Energie besitzt, wird so das Auftreten einer
+Energielücke verständlich.
+\begin{figure}[h]
+\includegraphics[width=0.6\textwidth]{ladungsdichte}
+\centering
+\label{fig:ladungsdichte}
+\end{figure}
+\paragraph{Formal:} \noindent
+Beim eindimensionalen leeren Gitter schneiden sich bei $k_x=\frac{g}{2}=
+\frac{\pi}{a}$ zwei Parabeln, so dass dort zwei entartete Lösungen existieren,
+zu denen die Koeffizienten $c_{\bm{k}}$ und $c_{\bm{k}-\bm{g}}$ gehören. Ist
+die periodische Störung schwach, so sollte der Hauptbetrag zur Wellenfunktion
+von diesen beiden Beiträgen kommen. Wir schreiben die Schrödingergleichung für
+den Wellenvektor $(\bm{k}-\bm{G})$:
+\begin{equation}\label{schroedinger}
+  \left(E-\frac{\hbar^2}{2m}\abs{\bm{k}-\bm{G}}^2\right)c_{\bm{k}-\bm{G}}=
+  \sum_{\bm{G}'}\tilde{V}_{\bm{G}'}c_{\bm{k}-\bm{G}-\bm{G}'}
+\end{equation}
+und lösen nach den Koeffizienten $c_{\bm{k}-\bm{G}}$ auf:
+\begin{equation}
+  c_{\bm{k}-\bm{G}}=\frac{\sum_{\bm{G}'}\tilde{V}_{\bm{G}'}
+  c_{\bm{k}-\bm{G}-\bm{G}'}}{E-\frac{\hbar^2}{2m}\abs{\bm{k}-\bm{G}}^2}
+\end{equation}
+Wenn das Potential $\tilde{V}_{\bm{G}'}$ nur eine kleine Störung ist, dann ist
+der gesuchte Wert von E vergleichbar mit der Energie $\frac{\hbar^2k^2}{2m}$ der
+freien Elektronen. Die größte Abweichung von diesem Verhalten tritt auf, wenn
+dern Nenner in der vorigen Gleichung verschwindet, also:
+\begin{equation}
+  \bm{k}^2\appro\abs{\bm{k}-\bm{G}}^2
+\end{equation}
+Dies trifft am Rand der Brillouin-Zone also bei $\frac{\pi}{a}$ zu, wenn der
+reziproke Gittervektor den Wert $\bm{G}=0$ annimmt. Dies bedeutet, dass die
+beiden Koeffizienten $c_{\bm{k}-\bm{g}}$ und $c_{\bm{k}}$ einen sehr hohen Wert
+annehmen. Die restlichen Koeffizienten können vernachlässift werden. Dies
+bezeichnet man als \textbf{Zwei-Komponenten-Näherung}. Somit haben wir nur noch
+zwei Gleichungen, die sich aus Gleichung \ref{schroedinger} ergeben:
+\begin{equation}\label{schroedinger1}
+  \left(\frac{\hbar^2\bm{k}^2}{2m}-E\right)c_{\bm{k}}+\tilde{V}_{\bm{g}}
+  c_{\bm{k}-\bm{g}}=0
+\end{equation}
+\begin{equation}\label{schroedinger2}
+  \left(\frac{\hbar^2\abs{\bm{k}-\bm{g}}^2}{2m}-E\right)c_{\bm{k}-\bm{g}}+
+  \tilde{V}_{\bm{-g}}c_{\bm{k}}=0
+\end{equation}
+Wir setzen Inversionssymmetrie und somit $\tilde{V}_{\bm{g}}=\tilde{V}_{\bm{-g}}$
+vorraus. Die Energieeigenwerte des leeren Gitters, benutzen wir als Abkürzung:
+\begin{equation}
+  \begin{align}
+    E_{\bm{k}}^0&=\frac{\hbar^2k^2}{2m}\\
+    E_{\bm{k}-\bm{g}}^0&=\frac{\hbar^2\abs{\bm{k}-\bm{g}}^2}{2m}
+  \end{align}
+\end{equation}
+Damit lassen sich die Eigenwerte der Gleichungen \ref{schroedinger1} und
+\ref{schroedinger2} ermitteln:
+\begin{equation}\label{lösung}
+  E_{s,a}=\frac{1}{2}(E_{\bm{k}-\bm{g}}^0+E_{\bm{k}}^0)\mp\sqrt{\frac{1}{4}
+  (E_{\bm{k}-\bm{g}}^0-E_{\bm{k}}^0)^2+\tilde{V}_{\bm{g}}^2}
+\end{equation}
+An der Grenze der Brillouin-Zone bei $\bm{k}=\frac{\bm{g}}{2}$ gilt
+$E_{\bm{k}-\bm{g}}^0=E_{\bm{k}}^0$, weswegen sich Gleichung \ref{lösung} zu
+\begin{equation}
+  E_{s,a}=E_{\bm{k}}^0\pm\abs{\tilde{V}_{\bm{g}}}
+\end{equation}
+vereinfacht. Für die Energiedifferenz folt somit:
+\begin{equation}
+  E_a-E_s=\delta E=2\abs{\tilde{V}_{\bm{g}}}
+\end{equation}
+Die Energieaufspaltung an der Grenze der Brillouin-Zone wird in dieser einfachen
+Näherung durch die erste Fourier-Komponente des Potentials $\tilde{V(\bm{r})}$
+bestimmt. Die Rechnung gilt nur für die Grenze der Brillouin-Zone bei
+$k=\frac{\pi}{a}$. Für $k=-\frac{\pi}{a}$ müssen die Koeffizienten $c_{\bm{k}}$
+und $c_{\bm{k}+\bm{g}}$ berücksichtigt werden. Die Berücksichtigung der
+Periodizität des Potentials in der Schrödinger-Gleichung führt in natürlicher
+Weise zu Energiebändern und zu verbotenen Bereichen, den Bandlücken.
+\subsubsection{Stark gebundene Elektronen}
+Bisher sind wir davon ausgegangen, dass sich Elektronen im Gestkörper frei
+bewegen können. Nun nehmen wir an, dass sich Elektronen vorzugsweise in der
+Nähe der Atomrümpfe aufhalten. Molekül- und Ionenkristalle stellen eine gute
+Anwendbarkeit dieser Betrachtungsweise dar, während auf Metalle eher der erste
+Ansatz zutrifft. Für die Energieeigenwerte ergibt sich nun:
+\begin{equation}\label{stark}
+  E_{\bm{k},i}\approx E_i-\alpha_i-\sum_n\beta_{i,n}
+  e^{i\bm{k}\cdot(\bm{R}_m-\bm{R}_n)}
+\end{equation}
+$\beta$ steht dabei für die Energieänderung, die durch den Überlapp der
+Wellenfunktion des Aufatoms mit den Wellenfunktionen der übrigen Atom zustande
+kommt. Mit $\alpha$ bezeichnen wir die Verschiebung des Energieeigenwertes des
+Aufatoms aufgrund der von den Nachbarn hervorgerufenen Potentialänderung. Der
+Index $i$ kennzeichnet die unterschiedlichen Energieniveaus. Wenn wir als
+Beispiel ein kubisch primitives Gitter mit sech nächsten Nachbarn mit den
+Koordinaten $\bm{R}_m-\bm{R}_n=(\pm a,0,0),(0,\pm a,0),(0,0,\pm a)$ betrachten,
+dann folgt mit Gleichung \ref{stark} für die Energieeigenwerte:
+\begin{equation}\label{stark2}
+  E_{\bm{k},i}\approx E_i-\alpha_i-2\beta_i[\cos(k_x a)+\cos(k_y a)+\cos(k_z a)]
+\end{equation}
+Dies zeigt, dass durch die Wechselwirkung zwischen den Nachbarn aus einem
+diskreten Energieniveau $E_i$ isolierter Atome ein energetisch abgesenktes Band
+der Breite $12\beta_i$ entsteht. Da der Wert von $\beta_i$ vor allem vom
+Überlapp der Wellenfunktionen bestimmt wird, hängt von ihm die Breite der Bänder
+ab. Weil Elektronen in tiefer liegenden Energieniveaus stärker lokalisiert sind,
+sehen sie weniger von ihrer Umgebung und die Bandaufspaltung ist entsprechend
+kleiner. $\alpha_i$ beschreibt die mittlere Absenkung der Energieniveaus
+aufgrund der Potentialänderung, die von den benachbarten Atomen am Ort des
+Aufatoms verursacht wird. Deswegen nimmt $a_i$ mit abnehmenden Atomabstand zu.
+Am $\Gamma$-Punkt lässt sich die Dispersionsrelation \ref{stark2} für kleine
+Wellenzahlen entwickeln. Der Betrag des Wellenvektors ist durch
+$k^2=k_x^2+k_y^2+k_z^2$ gegeben, so dass man für die Energie erhält:
+\begin{equation}
+  E_{\bm{k},i}\approx E_i-\alpha_i-6\beta_i+\beta_ia^2k^2
+\end{equation}
+Dies entspricht, abgesehen vom Nullpunkt der Dispersionrelation des freien
+Elektronengases. Vergleichen wir dies mit der Dispersionrelation
+$E=\frac{\hbar^2k^2}{2m}$ für freie Elektronen, so folgt für die effektive
+Masse:
+\begin{equation}
+  m_i^*=\frac{\hbar^2}{2\beta_ia^2}
+\end{equation}
 \subsection{Energiebänder}
+\subsubsection{Metalle und Isolatoren}
+Nachdem wir das Bändermodell motiviert haben, wollen wir nun auf Parameter
+eingehen, die den metallischen oder isolierendne Charakter eines Festkörpers
+bestimmen. Entscheidend ist, ob vorhandene Bänder vollständig oder nur teilweise
+besetzt sind. Volle Bänder tragen nicht zur elektrischen Leitfähigkeit bei,
+solche Festkörper sind Isolatoren. Durch Wechselwirkung der Elektronen
+untereinander oder mit dem Gitter werden weder Zustände erzeugt noch vernichtet.
+So findet man bei N wechselwirkenden Atomen für jeden möglichen elektronischen
+Zustnad der isolierten Atome ein Band mit N Zuständen. Dies bedeutet, dass unter
+Berücksichtigung der Spineinstellung aus den s- und p-Zuständen isolierter Atome
+Bänder mit 2N bzw. 6N Zuständen entstehen. Zuerst betrachten wir Alkali- oder
+Edelmetalle mit einatomiger Basis und einem Leitungselektron pro Atom. Die
+tieferliegenden Valenzbänder sind voll besetzt. Im Leitungsband, das von s-
+Elektronen gebilden wird, finden 2N Elektronen Platz. Da jedoch nur ein Elektron
+pro Atom zur Verfügung sthet, ist das Leitungsband halb gefüllt. Ist die Zahl
+der Elektronen pro Atom gerade, so sind die untern leigenden Bänder voll besetzt
+, das Band darüber leer. Derartige Festkörper sind Isolatoren.
+\begin{figure}[h]
+\includegraphics[width=0.6\textwidth]{bänder}
+\centering
+\label{fig:bänder}
+\end{figure}
 \section{Elektronische Transporteigenschaften}
 \subsubsection{Elektronen als Wellenpakete}
 Inwieweit sind die klassischen Gleichungen wie das 2. Newtonsche Gesetz auf
@@ -1285,9 +1456,55 @@ die Fermi-Geschwindigkeit $c_V^{el}$ in $\Lambda=\frac{1}{3}Cvl$ einsetzen:
   \Lambda_{el}=\frac{1}{3}c_V^{el}vl=\frac{1}{3}\frac{\pi^2nk_B^2T}{mv_F^2}v_Fl
   =\frac{\pi^2}{3}\frac{nk_B^2\tau}{m}T
 \end{equation}
-
-
-
+\subsubsection{Temperaturabhängigkeit der elektrischen Leitfähigkeit}
+Die Relaxationszeit $\tau$ wird durch die Streuung der Elektronen an Defekten,
+an Gitterschwingungen und an sich selber bestimmt. Wir spalten den elektrischen
+Widerstand $\rho=\frac{1}{\sigma}$ in zwei Teile auf. Der eine beruht auf
+Defektstreuung, der andere wird durch die thermische Bewegung des Gitters
+hervorgerufen.
+\begin{equation}
+  \rho=\frac{m}{ne^2\tau}=\rho_D+\rho_G=\frac{m}{ne^2\tau_D}+
+  \frac{m}{ne^2\tau_G(T)}
+\end{equation}
+Für $T\to 0$ tritt ein Temperaturunabhängiger Restwiderstand auf. Dieser wird
+nur durch Defekte hervorgerufen. Das \textbf{Restwiderstandverhältniss}
+$\frac{\rho(300K)}{\rho(4.2K)}$ ist ein Maß für die Konzentration der
+streuuenden Defekte und somit auch für die Reinheit des Materials. Bei hohen
+Temperaturen $T>\Theta$ dominiert die Streuung der Elektronen an Phononen. Für
+die inverse mittlere freie Weglänge gilt:
+\begin{equation}
+  \frac{1}{l}=n\sigma_{st}
+\end{equation}
+Der Streuquerschnitt $\sigma_{st}$ ist für diesen Prozess ungefähr konstant. Die
+inverse mittlere freie Weglänge steigt mit der Phononendichte $n$ proportional
+zur Temperatur an. Damit ist $\frac{1}{l}\propto T$. Die mittlere freie Stoßzeit
+hängt über $l=\tau v_F$ mit der mittleren freien Weglänge zusammen, somit folgt
+für die Temperaturabhängigkeit der elektrischen Leitfähigkeit:
+\begin{equation}
+  \sigma\propto\tau_G\propto\frac{1}{T}
+\end{equation}
+Bei genauer Betrachtung ergibt sicht:
+\begin{equation}
+  \sigma\propto\begin{cases}
+  const. & \text{für } T\ll\Theta \\
+  T^5 & \text{für } T<\Theta \\
+  T & \text{für } T\gg\Theta
+  \end{cases}
+\end{equation}
+\subsubsection{Eindimensionale Leiter}
+Die geometrische Voraussetzung dafür, dass die Probe eindimensionale
+Eigenschaften aufweist, sind dann gegeben, wennd die charakteristische Länge
+mit der Fermi-Wellenlänge $\lambda_F$ vergleichbar ist. Eine weitere wichtige
+Annahme ist, dass die mittlere freie Weglänge der Elektronen groß ist verglichen
+mit der Drahtlänge, die Elektronen bewegen sich dann ballistisch, es treten
+keine Streuprozesse auf.
+Für den elektrischen Leitwer und den Widerstand finden wir:
+\begin{equation}
+  \begin{align}
+    G_Q&=\frac{I}{U}=\frac{2e^2}{h}\\
+    R_Q&=\frac{h}{2e^2}\approx 12.91 k\Omega
+  \end{align}
+\end{equation}
 \noindent \paragraph{Wiedemann-Franzsches Gesetz}
 Dieses empirische Gesetz beschreibt das Verhältnis zwischen thermischer
 Leitfähigkeit $\lambda$ und elektrischer Leitfähigkeit $\sigma$ als
@@ -1298,6 +1515,7 @@ proportiional zur Temperatur T, unabhängig von dem betrachteten Metall:
 Die Proportionalitätskonstante L heißt Lorenz-Zahl. Das Gesetz zeugt davon, dass
 in Metallen die Ladungsträger auch Träger von Wärmeenergie sind. Es gilt für
 im Vergleich zur Debye-Temperatur sehr tiefe und sehr hohe Temperaturen.
+\section{Supraleitung}
 
 
 
