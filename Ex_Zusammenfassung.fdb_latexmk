@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1515617970 "Ex_Zusammenfassung.tex" "Ex_Zusammenfassung.pdf" "Ex_Zusammenfassung" 1515617972
+["pdflatex"] 1516264325 "Ex_Zusammenfassung.tex" "Ex_Zusammenfassung.pdf" "Ex_Zusammenfassung" 1516264328
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1480098666 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/jknappen/ec/ecbx1095.tfm" 1480098696 3584 21b378cca2e40816b0e6d74a4dc98f04 ""
@@ -48,7 +48,6 @@
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1480098733 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1480098733 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1480098733 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
-  "/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy8.pfb" 1480098733 29407 8c6dfc0f2d83bfc4807c3b1dc90ef23e ""
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb" 1480098733 35479 892d27442ef9ef29ce1ee57aa0e8a665 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1480098734 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb" 1480098734 35309 940e81a5b9e04201a07e8b33a3ae6e64 ""
@@ -214,11 +213,10 @@
   "/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1495593472 2350277 a699055bee05bf8a40b0504752487295 ""
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1504384452 4129591 41719a1406833bc5cbfe30fd9593ab14 ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
-  "Ex_Zusammenfassung.aux" 1515617972 5704 7aafdaa8e334773d063c743bce809f39 ""
-  "Ex_Zusammenfassung.tex" 1515617969 71399 4724204e2e288e2290de2049aef762fd ""
+  "Ex_Zusammenfassung.aux" 1516264326 5883 d6d1b95fe37d1ba4e7e77fea67a0cfaf ""
+  "Ex_Zusammenfassung.tex" 1516264306 74207 79d0becdf340fce4129ea8553abffc23 ""
   "images/bloch.png" 1515490791 448095 46a03e36d893201a97849e76a1120f4a ""
   "images/ewald-kugel.png" 1515159601 67920 00a66fe203ca856b83a74eef93bb524f ""
-  "images/ladungsdichte.png" 1515608286 246251 80a846393c160b7782026beb3ff27e37 ""
   "images/spezifische.png" 1515161050 46558 d000b9394da0bbc2bc8a161487b02ca1 ""
   "images/spezifische2.png" 1515437556 148561 7241b836f4d3b45369c22b46a20efee2 ""
   "images/streuung.png" 1515504163 301565 2b69744dd9ced372b11735f37e95a334 ""

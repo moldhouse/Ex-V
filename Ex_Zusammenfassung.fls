@@ -328,16 +328,12 @@ INPUT ./images/spezifische2.png
 INPUT images/bloch.png
 INPUT ./images/bloch.png
 INPUT ./images/bloch.png
-INPUT images/ladungsdichte.png
-INPUT ./images/ladungsdichte.png
-INPUT ./images/ladungsdichte.png
 INPUT images/streuung.png
 INPUT ./images/streuung.png
 INPUT ./images/streuung.png
 INPUT Ex_Zusammenfassung.aux
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb
-INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy8.pfb
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb

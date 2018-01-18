@@ -850,7 +850,7 @@ ergibt $\int dS_E=4\pi k^2$. Für die Zustandsdichte folgt somit:
 \end{equation}
 und für die elektronische Zustandsdichte pro Volumen $D(E)=\frac{\mathcal{D}
 (E)}{V}$:
-\begin{equation}
+\begin{equation}\label{zustands}
   D(E)=\frac{1}{2\pi^2}\left( \frac{2m}{\hbar^2}\right)^{\frac{3}{2}}\sqrt{E}
 \end{equation}
 Obwohl die Dichte von Zuständen von Elektronen und Phononen im reziproken
@@ -901,10 +901,10 @@ nur durch die Massen und Konzentration der Elektronen bestimmt ist:
 \end{equation}
 Weiter definieren wir:
 \begin{equation}
-  k_F=(3\pi^2n)^{\frac{2}{3}}\quad \text{Fermi-Wellenvektor}
+  k_F=(3\pi^2n)^{\frac{1}{3}}\quad \text{Fermi-Wellenvektor}
 \end{equation}
 \begin{equation}
-  v_F=\frac{\hbar}{}(3\pi^2n)^{\frac{2}{3}}\quad \text{Fermi-Geschwindigkeit}
+  v_F=\frac{\hbar}{m}(3\pi^2n)^{\frac{1}{3}}\quad \text{Fermi-Geschwindigkeit}
 \end{equation}
 \begin{equation}
   T_F=\frac{E_F}{k_B}\quad \text{Fermi-Temperatur}
@@ -1075,178 +1075,7 @@ Gittervektor, dass die innerhalb der ersten Zone liegen:
 \centering
 \label{fig:bloch}
 \end{figure}
-\subsubsection{Energielücken}
-\paragraph{Anschaulich:} \noindent
-Bewegt sich ein Elektron mit Wellenvektor $\bm{k}$ entlang einer atomaren Kette,
-so wird es an jedem Atom gestreut. Erfüllt der Wellenvektor des Elektrons die
-Beugungsbedingung $\bm{K}=\bm{G}$, so erfährt das Elektron eine Bragg-Reflexion,
-bei der sich die Teilwellen konstruktiv überlagen. Da die reflektierte Welle in
-die andere Richtung läuft, gilt für den Streuvektor $\bm{K}=2\bm{k}$. Es folgt:
-\begin{equation}
-  k=\frac{K}{2}=\frac{G}{2}=\pm\frac{\pi}{a}
-\end{equation}
-Für die resultierende Wellenfunktion ergeben sich zwei Möglichkeiten.
-\begin{equation}
-  \begin{align}
-  \psi_s&\propto\left(e^{\frac{igx}{2}}+e^{\frac{-igx}{2}}\right)\propto\cos\left
-  (\frac{gx}{2}\right) \\
-  \psi_a&\propto\left(e^{\frac{igx}{2}}-e^{\frac{-igx}{2}}\right)\propto\sin\left
-  (\frac{gx}{2}\right)
-  \end{align}
-\end{equation}
-Daraus resultiert eine räumlich modulierte Ladungsdichte:
-\begin{equation}
-  \begin{align}
-  \rho_s &=e\abs{\psi_s}^2\propto\cos^2(\frac{\pi x}{a}) \\
-  \rho_a &=e\abs{\psi_a}^2\propto\sin^2(\frac{\pi x}{a})
-  \end{align}
-\end{equation}
-Eine laufende Welle hätte dagegen eine konstante Ladungsdichte. Bei der Lösung
-$\psi_s$ ist die dichte in Kernnähe gegenüber der laufenden Welle erhöht, bei
-$\psi_a$ reduziert sie sich (\ref{fig:ladungsdichte}). Ist das Potential in
-Kernnähe abgesenkt, so führt dies, im Vergleich zur laufenden Welle im
-symmetrischen Fall zu einer Absenkung, im antisymmetrischen Fall zu einer
-Anhebung der Elektronenenergie. Da die Schrödinger-Gleichung an der Zonengrenze
-zwei Lösungen mit unterschiedlicher Energie besitzt, wird so das Auftreten einer
-Energielücke verständlich.
-\begin{figure}[h]
-\includegraphics[width=0.6\textwidth]{ladungsdichte}
-\centering
-\label{fig:ladungsdichte}
-\end{figure}
-\paragraph{Formal:} \noindent
-Beim eindimensionalen leeren Gitter schneiden sich bei $k_x=\frac{g}{2}=
-\frac{\pi}{a}$ zwei Parabeln, so dass dort zwei entartete Lösungen existieren,
-zu denen die Koeffizienten $c_{\bm{k}}$ und $c_{\bm{k}-\bm{g}}$ gehören. Ist
-die periodische Störung schwach, so sollte der Hauptbetrag zur Wellenfunktion
-von diesen beiden Beiträgen kommen. Wir schreiben die Schrödingergleichung für
-den Wellenvektor $(\bm{k}-\bm{G})$:
-\begin{equation}\label{schroedinger}
-  \left(E-\frac{\hbar^2}{2m}\abs{\bm{k}-\bm{G}}^2\right)c_{\bm{k}-\bm{G}}=
-  \sum_{\bm{G}'}\tilde{V}_{\bm{G}'}c_{\bm{k}-\bm{G}-\bm{G}'}
-\end{equation}
-und lösen nach den Koeffizienten $c_{\bm{k}-\bm{G}}$ auf:
-\begin{equation}
-  c_{\bm{k}-\bm{G}}=\frac{\sum_{\bm{G}'}\tilde{V}_{\bm{G}'}
-  c_{\bm{k}-\bm{G}-\bm{G}'}}{E-\frac{\hbar^2}{2m}\abs{\bm{k}-\bm{G}}^2}
-\end{equation}
-Wenn das Potential $\tilde{V}_{\bm{G}'}$ nur eine kleine Störung ist, dann ist
-der gesuchte Wert von E vergleichbar mit der Energie $\frac{\hbar^2k^2}{2m}$ der
-freien Elektronen. Die größte Abweichung von diesem Verhalten tritt auf, wenn
-dern Nenner in der vorigen Gleichung verschwindet, also:
-\begin{equation}
-  \bm{k}^2\appro\abs{\bm{k}-\bm{G}}^2
-\end{equation}
-Dies trifft am Rand der Brillouin-Zone also bei $\frac{\pi}{a}$ zu, wenn der
-reziproke Gittervektor den Wert $\bm{G}=0$ annimmt. Dies bedeutet, dass die
-beiden Koeffizienten $c_{\bm{k}-\bm{g}}$ und $c_{\bm{k}}$ einen sehr hohen Wert
-annehmen. Die restlichen Koeffizienten können vernachlässift werden. Dies
-bezeichnet man als \textbf{Zwei-Komponenten-Näherung}. Somit haben wir nur noch
-zwei Gleichungen, die sich aus Gleichung \ref{schroedinger} ergeben:
-\begin{equation}\label{schroedinger1}
-  \left(\frac{\hbar^2\bm{k}^2}{2m}-E\right)c_{\bm{k}}+\tilde{V}_{\bm{g}}
-  c_{\bm{k}-\bm{g}}=0
-\end{equation}
-\begin{equation}\label{schroedinger2}
-  \left(\frac{\hbar^2\abs{\bm{k}-\bm{g}}^2}{2m}-E\right)c_{\bm{k}-\bm{g}}+
-  \tilde{V}_{\bm{-g}}c_{\bm{k}}=0
-\end{equation}
-Wir setzen Inversionssymmetrie und somit $\tilde{V}_{\bm{g}}=\tilde{V}_{\bm{-g}}$
-vorraus. Die Energieeigenwerte des leeren Gitters, benutzen wir als Abkürzung:
-\begin{equation}
-  \begin{align}
-    E_{\bm{k}}^0&=\frac{\hbar^2k^2}{2m}\\
-    E_{\bm{k}-\bm{g}}^0&=\frac{\hbar^2\abs{\bm{k}-\bm{g}}^2}{2m}
-  \end{align}
-\end{equation}
-Damit lassen sich die Eigenwerte der Gleichungen \ref{schroedinger1} und
-\ref{schroedinger2} ermitteln:
-\begin{equation}\label{lösung}
-  E_{s,a}=\frac{1}{2}(E_{\bm{k}-\bm{g}}^0+E_{\bm{k}}^0)\mp\sqrt{\frac{1}{4}
-  (E_{\bm{k}-\bm{g}}^0-E_{\bm{k}}^0)^2+\tilde{V}_{\bm{g}}^2}
-\end{equation}
-An der Grenze der Brillouin-Zone bei $\bm{k}=\frac{\bm{g}}{2}$ gilt
-$E_{\bm{k}-\bm{g}}^0=E_{\bm{k}}^0$, weswegen sich Gleichung \ref{lösung} zu
-\begin{equation}
-  E_{s,a}=E_{\bm{k}}^0\pm\abs{\tilde{V}_{\bm{g}}}
-\end{equation}
-vereinfacht. Für die Energiedifferenz folt somit:
-\begin{equation}
-  E_a-E_s=\delta E=2\abs{\tilde{V}_{\bm{g}}}
-\end{equation}
-Die Energieaufspaltung an der Grenze der Brillouin-Zone wird in dieser einfachen
-Näherung durch die erste Fourier-Komponente des Potentials $\tilde{V(\bm{r})}$
-bestimmt. Die Rechnung gilt nur für die Grenze der Brillouin-Zone bei
-$k=\frac{\pi}{a}$. Für $k=-\frac{\pi}{a}$ müssen die Koeffizienten $c_{\bm{k}}$
-und $c_{\bm{k}+\bm{g}}$ berücksichtigt werden. Die Berücksichtigung der
-Periodizität des Potentials in der Schrödinger-Gleichung führt in natürlicher
-Weise zu Energiebändern und zu verbotenen Bereichen, den Bandlücken.
-\subsubsection{Stark gebundene Elektronen}
-Bisher sind wir davon ausgegangen, dass sich Elektronen im Gestkörper frei
-bewegen können. Nun nehmen wir an, dass sich Elektronen vorzugsweise in der
-Nähe der Atomrümpfe aufhalten. Molekül- und Ionenkristalle stellen eine gute
-Anwendbarkeit dieser Betrachtungsweise dar, während auf Metalle eher der erste
-Ansatz zutrifft. Für die Energieeigenwerte ergibt sich nun:
-\begin{equation}\label{stark}
-  E_{\bm{k},i}\approx E_i-\alpha_i-\sum_n\beta_{i,n}
-  e^{i\bm{k}\cdot(\bm{R}_m-\bm{R}_n)}
-\end{equation}
-$\beta$ steht dabei für die Energieänderung, die durch den Überlapp der
-Wellenfunktion des Aufatoms mit den Wellenfunktionen der übrigen Atom zustande
-kommt. Mit $\alpha$ bezeichnen wir die Verschiebung des Energieeigenwertes des
-Aufatoms aufgrund der von den Nachbarn hervorgerufenen Potentialänderung. Der
-Index $i$ kennzeichnet die unterschiedlichen Energieniveaus. Wenn wir als
-Beispiel ein kubisch primitives Gitter mit sech nächsten Nachbarn mit den
-Koordinaten $\bm{R}_m-\bm{R}_n=(\pm a,0,0),(0,\pm a,0),(0,0,\pm a)$ betrachten,
-dann folgt mit Gleichung \ref{stark} für die Energieeigenwerte:
-\begin{equation}\label{stark2}
-  E_{\bm{k},i}\approx E_i-\alpha_i-2\beta_i[\cos(k_x a)+\cos(k_y a)+\cos(k_z a)]
-\end{equation}
-Dies zeigt, dass durch die Wechselwirkung zwischen den Nachbarn aus einem
-diskreten Energieniveau $E_i$ isolierter Atome ein energetisch abgesenktes Band
-der Breite $12\beta_i$ entsteht. Da der Wert von $\beta_i$ vor allem vom
-Überlapp der Wellenfunktionen bestimmt wird, hängt von ihm die Breite der Bänder
-ab. Weil Elektronen in tiefer liegenden Energieniveaus stärker lokalisiert sind,
-sehen sie weniger von ihrer Umgebung und die Bandaufspaltung ist entsprechend
-kleiner. $\alpha_i$ beschreibt die mittlere Absenkung der Energieniveaus
-aufgrund der Potentialänderung, die von den benachbarten Atomen am Ort des
-Aufatoms verursacht wird. Deswegen nimmt $a_i$ mit abnehmenden Atomabstand zu.
-Am $\Gamma$-Punkt lässt sich die Dispersionsrelation \ref{stark2} für kleine
-Wellenzahlen entwickeln. Der Betrag des Wellenvektors ist durch
-$k^2=k_x^2+k_y^2+k_z^2$ gegeben, so dass man für die Energie erhält:
-\begin{equation}
-  E_{\bm{k},i}\approx E_i-\alpha_i-6\beta_i+\beta_ia^2k^2
-\end{equation}
-Dies entspricht, abgesehen vom Nullpunkt der Dispersionrelation des freien
-Elektronengases. Vergleichen wir dies mit der Dispersionrelation
-$E=\frac{\hbar^2k^2}{2m}$ für freie Elektronen, so folgt für die effektive
-Masse:
-\begin{equation}
-  m_i^*=\frac{\hbar^2}{2\beta_ia^2}
-\end{equation}
 \subsection{Energiebänder}
-\subsubsection{Metalle und Isolatoren}
-Nachdem wir das Bändermodell motiviert haben, wollen wir nun auf Parameter
-eingehen, die den metallischen oder isolierendne Charakter eines Festkörpers
-bestimmen. Entscheidend ist, ob vorhandene Bänder vollständig oder nur teilweise
-besetzt sind. Volle Bänder tragen nicht zur elektrischen Leitfähigkeit bei,
-solche Festkörper sind Isolatoren. Durch Wechselwirkung der Elektronen
-untereinander oder mit dem Gitter werden weder Zustände erzeugt noch vernichtet.
-So findet man bei N wechselwirkenden Atomen für jeden möglichen elektronischen
-Zustnad der isolierten Atome ein Band mit N Zuständen. Dies bedeutet, dass unter
-Berücksichtigung der Spineinstellung aus den s- und p-Zuständen isolierter Atome
-Bänder mit 2N bzw. 6N Zuständen entstehen. Zuerst betrachten wir Alkali- oder
-Edelmetalle mit einatomiger Basis und einem Leitungselektron pro Atom. Die
-tieferliegenden Valenzbänder sind voll besetzt. Im Leitungsband, das von s-
-Elektronen gebilden wird, finden 2N Elektronen Platz. Da jedoch nur ein Elektron
-pro Atom zur Verfügung sthet, ist das Leitungsband halb gefüllt. Ist die Zahl
-der Elektronen pro Atom gerade, so sind die untern leigenden Bänder voll besetzt
-, das Band darüber leer. Derartige Festkörper sind Isolatoren.
-\begin{figure}[h]
-\includegraphics[width=0.6\textwidth]{bänder}
-\centering
-\label{fig:bänder}
-\end{figure}
 \section{Elektronische Transporteigenschaften}
 \subsubsection{Elektronen als Wellenpakete}
 Inwieweit sind die klassischen Gleichungen wie das 2. Newtonsche Gesetz auf
@@ -1442,20 +1271,6 @@ elektrischen Ladungstransport.
 \centering
 \label{fig:streuung}
 \end{figure}
-\subsubsection{Wärmetransport in Metallen}
-Geht der Wärmetransport in erster Linie auf die Wirkung der Elektronen oder der
-Phononen zurück? Bei sehr tiefen Temperaturen, liefern die Elektronen den
-dominierenden Beitrag, da die spezifische Wärme der Elektronen linear mit der
-Temperatur abnimmt, die des Gitter jedoch mit $T^3$ abnimmt. Wenn wir den
-Beitrag der Phononen vernachlässigen, können wir für die elektronische
-Wärmeleitfähigkeit $\Lambda_{el}$ wieder die Analogie zur kinetischen Gastheorie
-benutzen. Da der Wärmetransport, wie der Ladungstransport nur duch angeregt
-Elektronen an der Fermi-Oberfläche erfolt, können wir die spezifische Wärme und
-die Fermi-Geschwindigkeit $c_V^{el}$ in $\Lambda=\frac{1}{3}Cvl$ einsetzen:
-\begin{equation}
-  \Lambda_{el}=\frac{1}{3}c_V^{el}vl=\frac{1}{3}\frac{\pi^2nk_B^2T}{mv_F^2}v_Fl
-  =\frac{\pi^2}{3}\frac{nk_B^2\tau}{m}T
-\end{equation}
 \subsubsection{Temperaturabhängigkeit der elektrischen Leitfähigkeit}
 Die Relaxationszeit $\tau$ wird durch die Streuung der Elektronen an Defekten,
 an Gitterschwingungen und an sich selber bestimmt. Wir spalten den elektrischen
@@ -1492,19 +1307,8 @@ Bei genauer Betrachtung ergibt sicht:
   \end{cases}
 \end{equation}
 \subsubsection{Eindimensionale Leiter}
-Die geometrische Voraussetzung dafür, dass die Probe eindimensionale
-Eigenschaften aufweist, sind dann gegeben, wennd die charakteristische Länge
-mit der Fermi-Wellenlänge $\lambda_F$ vergleichbar ist. Eine weitere wichtige
-Annahme ist, dass die mittlere freie Weglänge der Elektronen groß ist verglichen
-mit der Drahtlänge, die Elektronen bewegen sich dann ballistisch, es treten
-keine Streuprozesse auf.
-Für den elektrischen Leitwer und den Widerstand finden wir:
-\begin{equation}
-  \begin{align}
-    G_Q&=\frac{I}{U}=\frac{2e^2}{h}\\
-    R_Q&=\frac{h}{2e^2}\approx 12.91 k\Omega
-  \end{align}
-\end{equation}
+
+
 \noindent \paragraph{Wiedemann-Franzsches Gesetz}
 Dieses empirische Gesetz beschreibt das Verhältnis zwischen thermischer
 Leitfähigkeit $\lambda$ und elektrischer Leitfähigkeit $\sigma$ als
@@ -1515,7 +1319,168 @@ proportiional zur Temperatur T, unabhängig von dem betrachteten Metall:
 Die Proportionalitätskonstante L heißt Lorenz-Zahl. Das Gesetz zeugt davon, dass
 in Metallen die Ladungsträger auch Träger von Wärmeenergie sind. Es gilt für
 im Vergleich zur Debye-Temperatur sehr tiefe und sehr hohe Temperaturen.
+
+\subsubsection{Wärmetransport in Metallen}
+Geht der Wärmetransport in erster Linie auf die Wirkung der Elektronen oder der
+Phononen zurück? Bei sehr tiefen Temperaturen, liefern die Elektronen den
+dominierenden Beitrag, da die spezifische Wärme der Elektronen linear mit der
+Temperatur abnimmt, die des Gitter jedoch mit $T^3$ abnimmt. Wenn wir den
+Beitrag der Phononen vernachlässigen, können wir für die elektronische
+Wärmeleitfähigkeit $\Lambda_{el}$ wieder die Analogie zur kinetischen Gastheorie
+benutzen. Da der Wärmetransport, wie der Ladungstransport nur duch angeregt
+Elektronen an der Fermi-Oberfläche erfolt, können wir die spezifische Wärme und
+die Fermi-Geschwindigkeit $c_V^{el}$ in $\Lambda=\frac{1}{3}Cvl$ einsetzen:
+\begin{equation}
+  \Lambda_{el}=\frac{1}{3}c_V^{el}vl=\frac{1}{3}\frac{\pi^2nk_B^2T}{mv_F^2}v_Fl
+  =\frac{\pi^2}{3}\frac{nk_B^2\tau}{m}T
+\end{equation}
 \section{Supraleitung}
+Supraleiter besitzen unter einer kritischen Temperatur $T_C$ keine elektrischen
+Widerstand. Im Unterschied zu idealen Leitern verdrängen sie ein angelegtes
+Magnetfeld aus ihrem Inneren, wenn sie die kritische Temperatur unterschreiten.
+Das Magnetfeld kann nicht eindringen, da an der Probenoberfläche Ströme
+induziert werden, die das Feld abschirmen. Die Magnetfeldverdrängung am
+Sprungpunkt heißt Meißner-Ochsenfeld-Effekt. Kleine Magnetfelder werden von
+Supraleitern vollständig abgeschirmt, denn an der Oberfläche werden Ströme
+induziert, die eine Magnetisierung mit einem Feld anregen, das dem angelegten
+Feld entgegen wirkt. Da der Magnetfluss vollständig verdrängt wird, können
+wir für die magnetische Induktion $\bm{B}_i$ im Inneren schreiben:
+\begin{equation}
+  \bm{B}_i=\mu_0(\bm{H}+\bm{M})=0
+\end{equation}
+Damit ist die Magnetisierung durch $\bm{M}=-\frac{\bm{B}_a}{\mu_0}$ gegeben.
+Für die magnetische Suszeptibilität folgt:
+\begin{equation}
+  \chi=\frac{\mu_0\bm{M}}{\bm{M}}=-1
+\end{equation}
+Supraleiter sind somit ideale Leiter und ideale Diamagnete. Wird das äußere
+Feld erhöht, so bricht die Abschirmung bei einer kritischen Feldstärme $B_C$
+zusammen. Es gilt:
+\begin{equation}
+  B_C(T)=B_C(0)\left[1-\left(\frac{T}{T_C}\right)^2\right]
+\end{equation}
+Der verschwinden Widerstand muss nun in den Maxwell-Gleichungen berücksichtigt
+werden. Die erste London-Gleichung besagt:
+\begin{equation}
+  \frac{d\bm{j}_s}{dt}=\frac{n_se^2_s}{m_s}\mathcal{E}
+\end{equation}
+Es wurde einfach der Stoßterm in der Bewegungsgleichung weggelassen.
+\section{Halbleiter}
+\subsection{Ladungsträgerdichte}
+In Halbleitern tragen sowohl Elektronen als auch Löcher zum Ladungstransport bei.
+Für die Leitfähigkeit intrinsischer Halbleiter schreiben wir:
+\begin{equation}
+  \sigma=e(n\mu_n+p\mu_p)
+\end{equation}
+wobei $n$ und $p$ für die Dichte der freien Elektronen bzw. Löcher stehen.
+$\mu_n$ und $\mu_p$ sind die jeweiligen Beweglichkeiten.
+Wir erinnern uns an die Beweglichkeit $\mu=\frac{e\tau}{m}$.
+Die Elektronenkonzentration im Leitungsband erhalten wir durch Integration über
+das Produkt aus Zustandsdichte und Wahrscheinlichkeit. Da die Fermi-Funktion mit
+zunehmender Energie stark abnimmt, sind nur die Zustände an der unteren
+Leitungsbandkannte von Bedeutung, für die obere Integrationsgrenze dürfen wir
+deshalb unendlich setzen. Es gilt:
+\begin{equation}
+  \begin{align}
+    n&=\int_{E_L}^{\infty}D_L(E)f(E,T)dE\\
+    p&=\int_{-\infty}^{E_V}D_V(E)[1-f(E,T)]dE
+  \end{align}
+\end{equation}
+In der Nähe der Bandextrema verlaufen die Dispersionkurven parabelförmig, so
+dass wir für die Besetzungswahrscheinlichkeit die des freien Elektronengas aus
+Gleichung \ref{zustands} ansetzen können, indem wir die Massen der freien
+Elektronen durch die effektiven Massen ersetzen.
+\begin{equation}
+  \begin{align}
+    D_L(E)&=\frac{1}{2\pi^2}\left(\frac{2m_n^*}{\hbar^2}\right)^{\frac{3}{2}}
+    \sqrt{E-E_L}\\
+    D_V(E)&=\frac{1}{2\pi^2}\left(\frac{2m_p^*}{\hbar^2}\right)^{\frac{3}{2}}
+    \sqrt{E_V-E}
+  \end{align}
+\end{equation}
+Im Bereich $E_V<E<E_L$ existieren keine Zustände, da dort die Energielücke ist.
+Die Fermi-Energie liegt bei Eigenleitung immer im mittleren Bereich der
+Energielücke, der Abstand zu den $E_V$ und $E_L$ ist also immer so groß, dass
+wir die Fermi-Funktionen nähern können:
+\begin{equation}
+  \begin{align}
+    f(E,T)&=\frac{1}{e^{\frac{E-E_F}{k_BT}}-1}\approx e^{-\frac{E-E_F}{k_BT}}\\
+    1-f(E,T)&=\frac{1}{e^{\frac{E_F-E}{k_BT}}-1}\approx e^{-\frac{E_F-E}{k_BT}}\\
+  \end{align}
+\end{equation}
+Somit finden wir beispielsweise für die Elektronen:
+\begin{equation}
+  n=\int D_L(E)f(E)dE=\frac{1}{2\pi^2}\left(\frac{2m_n^*}{\hbar^2}\right)^
+  {\frac{3}{2}}e^{\frac{E_F}{k_BT}}\int_{E_L}^{\infty}\sqrt{E-E_L}
+  e^{\frac{E}{k_BT}}
+\end{equation}
+\subsection{Massenwirkungsgesetz}
+Dies lässt sich analytisch lösen, und wir erhalten für die Ladungsträgerdichten
+der Elektronen im Leitungsband und der Löcher im Valenzband:
+\begin{equation}\label{massenwirkung}
+  \begin{align}
+    n=&\mathcal{N}_Le^{-\frac{(E_L-E_F)}{k_BT}}\\
+    p=&\mathcal{N}_Ve^{\frac{(E_V-E_F)}{k_BT}}
+  \end{align}
+\end{equation}
+Für den Vorfaktor $\mathcal{N}$ gilt:
+\begin{equation}
+  \mathcal{N}=2\left(\frac{m_n^*k_BT}{2\pi\hbar^2}\right)^{\frac{3}{2}}
+\end{equation}
+Die Vorfaktoren sind verglichen mit dem Exponentialfaktor nur schwach
+Temperaturabhängig.
+Die Ladungsträgerdichten $n$ und $p$ werden durch die Lage des Fermi-Niveaus
+bestimmt, nicht aber das Produkt. Beschränken wir uns nun auf intrinsische
+Halbleiter, bei denen die Leitungselektronen nur aus dem Valenzband stammen, so
+können wir aus Gleichung \ref{massenwirkung} folgern:
+\begin{equation}
+  n\cdot p=\mathcal{N}_L\mathcal{N}_Ve{-\frac{E_g}{k_BT}}
+\end{equation}
+\begin{equation}
+  n_i=p_i=\sqrt{\mathcal{N}_L\mathcal{N}_V}e^{-\frac{E_g}{2k_BT}}
+\end{equation}
+Das Produkt der Ladungsträgerdichten ist also vollständig charakterisiert durch
+die Massen der Ladungsträger und die Energielücke und hat bei fester Temperatur
+für jeden Halbleiter einen charakteristischen Wert. Die Lage des Fermi-Niveaus
+und dessen Temperaturabhängigkeit lässt sich nun aus der Forderung nach
+Ladungsneutralität bestimmen. Mit $n_i=p_i$ für Eigenleitung folgt:
+\begin{equation}
+  E_F=\frac{E_L+E_V}{2}+\frac{k_BT}{2}\ln(\frac{\mathcal{N}_V}{\mathcal{N}_L})
+  =\frac{E_L+E_V}{2}+\frac{3}{4}k_BT\ln(\frac{m^*_p}{m^*_n})
+\end{equation}
+Bei $T=0$ liegt das Fermi-Band also in der Mitte der Energienlücke. Sind die
+effektiven Massen von Elektronen und Löchern gleich, sind also das Valenz- und
+das Leitungsband gleich stark gekrümmt, dann ändert sich die Lage mit
+zunehmender Temperatur auch nicht.
+\subsection{Dotierte Halbleiter}
+Bringen wir fünfwertige P-, As- oder Sb-Atome in ein vierwertiges Element wie
+Silizium ein, so gibt es ein Elektron, das nicht an der Bindung teilnehmen kann.
+Es bleibt jedoch auf Grund der Coulomb-Wechselwirkung bei tiefer Temperatur an
+den positiv geladenen Atomrumpf gebunden. Seine Bindungsenergie ist so gering,
+dass es sich bereits bei Zimmertemperatur vom Atomrumpf lösen und zur
+elektrischen Leitfähigkeit beitragen kann. Fünfwertige Atome in vierwertigen
+Kristallen werden deswegen als Donatoren bezeichnet. Bringen wir dreiwertige
+Fremdatome wie Al, Ga oder In in den selben Kristall ein, so fehlt ihnen ein
+Elektron zur vollständigen Bindung. Das fehlende Elektron wird abwechselnd einem
+der benachbarten Silizium-Atome entzogen. Es sieht so aus, als ob eine positive
+Ladung um den negativ geladenen Rest des Atoms kreisen würde. Bei
+Zimmertemperatur wird die positive Ladung an das Gitter weitergegeben. In
+einfachster Näherung lässt sich die Bewegung des Elektrons mit Hilfe des
+Wasserstoffmodels für die Energieeigenwerte beschreiben:
+\begin{equation}
+  E_\nu=-\frac{1}{2}\frac{m^*e^4}{(4\pi\varepsilon_r\varepsilon_0)^2\hbar^2}
+  \cdot\frac{1}{\nu^2}
+\end{equation}
+Die veränderten Größen wie die Dielektrizitätskonstante $\varepsilon_r$ bewirken,
+dass im Vergleich mit dem normalen Wasserstoffmodel die Eigenwerte um einen
+Faktor 100-1000 reduziert sind. Der effektive Bohrsche Radius ist etwa um einen
+Faktor 50 größer. Innerhalb der Elektronenbahn liegen ca. 1000 Gitteratome. Für
+$\nu=1$ erhält man die Ionisierungsenergie, die mit $E_d$ bzw. $E_a$ bezeichnet
+wird. Bei Silizium ergeben sich beispielsweise Werte von $E_d\approx 30meV$. Das
+Leitungsband entspricht dem Vakuum beim Wasserstoffatom, d.h. der Grundzustand
+$E_D$ des Donators liegt 30meV unter $E_L$.
+
+
 
 
 
