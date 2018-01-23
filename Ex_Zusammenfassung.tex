@@ -188,12 +188,12 @@ Die Atome eines zweiatomigen, hantelförmigen Moleküls können auch gegeneinand
 schwingen. Die einfachste Näherung ist eine harmonische Schwingung. Für die
 Energieniveaus gilt:
 \begin{equation}
-  E_\mu=\hbar\omega_0\left(\mu+\frac{1}{2}\right)
+  E_\mu=\hbar\omega_0\left(n+\frac{1}{2}\right)
 \end{equation}
-Die Auswahlregeln für den harmonischen Oszillator sind $\Delta\nu=\pm1$.
+Die Auswahlregeln für den harmonischen Oszillator sind $n=\pm1$.
 Für die Kraftkonstante der Molekülbindung gilt:
 \begin{equation}
-  \nu=\frac{1}{2\pi}\sqrt{\frac{k}{\mu}}
+  \nu=\frac{\omega_0}{2\pi}=\frac{1}{2\pi}\sqrt{\frac{k}{\mu}}
 \end{equation}
 \subsection{Elektronische Anregungen}
 Eine molekulare Schwingung wird angeregt, wenn das Molekül ein Quant mit der
@@ -218,7 +218,7 @@ Energie der Rotation und der Energie der Schwingung betrachten.
   E_{ges}=E_{vib}+E_{rot}
 \end{equation}
 \begin{equation}
-  E_{ges}=\left(\mu+\frac{1}{2}\right)h\mu+hc_0BJ(J+1)
+  E_{ges}=\left(n+\frac{1}{2}\right)h\nu+hc_0BJ(J+1)
 \end{equation}
 Bei einem Schwingungsübergang ändern sich also gleichzeitig die
 Rotationsübergänge um $\Delta J\pm1$. Wenn $\Delta J=+1$, spricht man vom
@@ -458,7 +458,7 @@ ein- oder zweiatomiger Basis unterscheiden sich also schon in der Anzahl der
 Zweige. Der akkustische Zweig entspricht dem Verhalten einer einatomigen Kette.
 Dies lässt sich zeigen, indem man $M=M_1=M_2$ annimmmt und den Gitterabstand
 a durch 2a ersetzt.
-\noindent \paragraph{Optischer Zweig} Für $q\to 0$ erhalten wir für die Phasen
+\paragraph{Optischer Zweig} \noindent Für $q\to 0$ erhalten wir für die Phasen
 u, v zweier Atome $\omega \approx 0$ und somit $u \approx v$. Für den optischen
 Zweig finden wir hingegen $\frac{u}{v}=-\frac{M_2}{M_1}$. Dies bedeutet, dass
 alle Atome mit der Masse $M_2$ in Gegenphase zu denen mit der Masse $M_1$
@@ -475,8 +475,8 @@ Gitterschwingungen verschwindet also das oszillierende Dipolmoment, auf Grund
 der gegenphasigen Schwingungen der Ionen in den benachbarten Zellen. Ist $M_1
 \neq M_2$ so existiert an der Grenze der Brillouin-Zone eine \textbf{
 Frequenzlücke}. In der verbotenen Zone existieren keine Eigenschwingungen des
-Gitters.
-\paragraph{}Allgemein gilt, dass bei einer Basis mit n Atomen 3n Zweige
+Gitters. \\
+Allgemein gilt, dass bei einer Basis mit n Atomen 3n Zweige
 existieren, 3 akkustische und (3n-3) optische. Wie bei den akkustischen Zweigen,
 gilt auch bei den optischen, dass doppelt so viele transversale wie
 longitudinale Zweige existieren.
@@ -605,7 +605,7 @@ und somit:
 \end{equation}
 Für die Zustandsdichte folgt:
 \begin{equation}
-  \mathcal{D}(\omega)d\omega=\rho_qd(\omega)\int_{w=const}\frac{dS_\omega}
+  \mathcal{D}(\omega)d\omega=\rho_qd\omega\int_{w=const}\frac{dS_\omega}
   {\abs{grad_{\bm{q}}\omega}}=
   \frac{V}{(2\pi)^3}d\omega\int_{w=const}\frac{dS_\omega}{v_g}
 \end{equation}
@@ -613,7 +613,7 @@ Bei isotropen Festkörpern ist die Fläche konstanter Frequenz im reziproken Rau
 die Oberfläche einer Kugel, auf der die Gruppengeschwindigkeit konstant ist. Mit
 q als Radius dieser Kugel ergibt sich:
 \begin{equation}
-  \mathcal{D}(\omega)d\omega=\rho_qd(\omega)\frac{4\pi q^2}{v_g}
+  \mathcal{D}(\omega)d\omega=\rho_qd\omega\frac{4\pi q^2}{v_g}
   =\frac{V}{2\pi^2}\frac{q^2}{v_g}d\omega
 \end{equation}
 Die Verteilung wird also stark von der Gruppengeschwindigkeit beeinflusst. Je
@@ -692,7 +692,7 @@ analytisch für das Integral:
 \end{equation}
 Damit ergibt sich für die molare Wärme:
 \begin{equation}
-  C_V=\frac{12\pi^4}{5}Nk_B\left(\frac{\Theta}{T}\right)^3
+  C_V=\frac{12\pi^4}{5}Nk_B\left(\frac{T}{\Theta}\right)^3
 \end{equation}
 Dies ist das $T^3$-Gesetz für die spezifische Wärme von Festkörpern bei tiefen
 Temperaturen. Die Debye-Näherung ist gut für tiefe Temperaturen $T<\frac{\Theta}
@@ -799,7 +799,7 @@ Verhalten freier Elektronen zurückführen. Die Elektronen bewegen sich in einem
 konstanten Potential, eine Barriere ist nur am Probenrand vorhanden. Ein
 Elektron mit der Energie $E_F$ ist an den Festkörper gebunden, solange $E_F<W$
 ist, wobei W die Potentialtiefe ist. Die Austrittsarbeit ist definiert als
-$Phi=(W-E_F)$. Von einem Elektronengas oder \textbf{Fermi-Gas} spricht man, wenn
+$\Phi=(W-E_F)$. Von einem Elektronengas oder \textbf{Fermi-Gas} spricht man, wenn
 sich die Leitungselektronen in guter Näherung wie ein klassisches Gas verhalten.
 Allerdings sind die Elektronen dem Pauli-Prinzip unterworfen. Diese Näherung
 geht auf A. Sommerfeld zurück. Nun haben wir aber gesehen, dass Valenzelektronen
@@ -1144,7 +1144,7 @@ Gleichfeld $\bm{\varepsilon}$ and, so wirkt auf die Elektronen eine konstante
 Kraft $\bm{F}=-e\bm{\varepsilon}$. Diese bewirkt eine gleichmäßige Bewegung
 der Elektronen im $\bm{k}$-Raum. Da sich die Wellenfunktion und der
 Energieeigenwert eines Kristallelektrons periodisch wiederholen, resultiert
-daraus im realen Taum eine periodische Geschwindigkeitsänderung. Damit verbunden
+daraus im realen Raum eine periodische Geschwindigkeitsänderung. Damit verbunden
 ist eine oszillatorische Bewegung der Elektronen. Im Idealfall stoßfreier
 Elektronbewegung gibt es also bei einem unendlich ausgedehnten Kristall keine
 Gleichstromleitfähigkeit. In einem perfekten Kristall würden Elektronen nur noch
@@ -1434,7 +1434,7 @@ bestimmt, nicht aber das Produkt. Beschränken wir uns nun auf intrinsische
 Halbleiter, bei denen die Leitungselektronen nur aus dem Valenzband stammen, so
 können wir aus Gleichung \ref{massenwirkung} folgern:
 \begin{equation}
-  n\cdot p=\mathcal{N}_L\mathcal{N}_Ve{-\frac{E_g}{k_BT}}
+  n\cdot p=\mathcal{N}_L\mathcal{N}_Ve^{-\frac{E_g}{k_BT}}
 \end{equation}
 \begin{equation}
   n_i=p_i=\sqrt{\mathcal{N}_L\mathcal{N}_V}e^{-\frac{E_g}{2k_BT}}

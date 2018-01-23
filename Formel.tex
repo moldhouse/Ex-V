@@ -1,0 +1,323 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[linguistics]{forest}
+\usepackage{mathtools}
+\usepackage{bbm}
+\usepackage[utf8]{inputenc} % this is needed for umlauts
+\usepackage[ngerman]{babel} % this is needed for umlauts
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr}
+\usepackage[makeroom]{cancel}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{ulem}
+\usepackage{graphicx}
+\usepackage{bm}
+
+\graphicspath{{images/}}
+\setlength{\parindent}{0pt}
+
+\expandafter\def\expandafter\normalsize\expandafter{%
+    \normalsize
+    \setlength\abovedisplayskip{20pt}
+    \setlength\belowdisplayskip{15pt}
+    \setlength\abovedisplayshortskip{15pt}
+    \setlength\belowdisplayshortskip{13pt}
+}
+
+\input ulem.sty
+
+\newlist{arrowlist}{itemize}{1}
+\setlist[arrowlist]{label=$\Rightarrow$}
+
+\tikzset{node distance = 1cm and 5cm}
+\usetikzlibrary{trees}
+\usepackage[a4paper,bindingoffset=0.2in,
+            left=1in,right=1in,top=1.2in,bottom=1in,
+            footskip=.25in]{geometry}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rfoot{Page \thepage}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+\DeclareMathOperator{\rank}{rank}
+
+
+% Custom colors
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+\usepackage{listings}
+
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+language=Python,
+basicstyle=\ttm,
+otherkeywords={self},             % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepgreen},
+frame=tb,                         % Any extra options here
+showstringspaces=false            %
+}}
+
+
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+
+% Python for external files
+\newcommand\pythonexternal[2][]{{
+\pythonstyle
+\lstinputlisting[#1]{#2}}}
+
+% Python for inline
+\newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
+
+\begin{document}
+\begin{equation}
+  E=\frac{J(J+1)\hbar^2}{2I}
+\end{equation}
+\begin{equation}
+  I=\frac{m_1\cdot m_2}{m_1+m_2}{r^2}
+\end{equation}
+\begin{equation}
+  E=\hbar w(n+\frac{1}{2})
+\end{equation}
+\begin{equation}
+  \nu=\frac{\omega}{2\pi}=\sqrt{\frac{k}{\mu}}
+\end{equation}
+\begin{equation}
+  E_{ges}=\left(n+\frac{1}{2}\right)h\nu+\frac{\hbar^2J(J+1)}{2I}
+\end{equation}
+\begin{equation}
+  P=\frac{N\cdot V_{\text{Atom}}}{V_{\text{Elementarzelle}}}
+\end{equation}
+\begin{equation}
+  2d_{hkl}\sin{\theta}=\lambda
+\end{equation}
+\begin{equation}
+  v_{ph}=\frac{\omega}{q}
+\end{equation}
+\begin{equation}
+  v_g=\frac{\partial w}{\partial q}
+\end{equation}
+\begin{equation}
+  \bm{G}=\frac{2\pi}{a}
+\end{equation}
+Dispersionsrelation lineare Kette:
+\begin{equation}
+  \omega=2\sqrt{\frac{C_1}{M}}\left|\sin\left(\frac{qa}{2}\right)\right|
+\end{equation}
+Lösungsansatz:
+\begin{equation}
+  u_{s+n}=Ue^{-i[\omega t-q(s+n)a]}
+\end{equation}
+Modifizierte Streubedingung:
+\begin{equation}
+  \begin{align}
+    \hbar\omega&=\hbar\omega_0+\hbar\omega_{\bm{q}}\\
+    \hbar\bm{k}&=\hbar\bm{k}_0\pm\hbar\bm{q}+\hbar\bm{G}
+  \end{align}
+\end{equation}
+Zustandsdichte im reziproken Raum:
+\begin{equation}
+  \rho_q^{(n)}=\frac{L^{n}}{(2\pi)^n}
+\end{equation}
+Debye-Näherung $\omega=vq$:
+\begin{equation}
+  \mathcal{D}(\omega)d\omega=\rho_q\int_\omega^{\omega+dw}d^3q=\rho_qd\omega
+  \int_{\omega=const}\frac{dS_\omega}{v_g}=\rho_qd\omega\frac{4\pi q^2}{v_g}=
+  \frac{V}{2\pi^2}\frac{\omega^2}{v^3}d\omega
+\end{equation}
+\begin{equation}
+  U=\int_0^{\omega_D}\hbar\omega\mathcal{D}(\omega)\langle n(\omega,T)\rangle
+  d\omega
+\end{equation}
+\begin{equation}
+  \begin{align}
+    k_B\Theta&=\hbar\omega_D \\
+    x&=\frac{\hbar\omega}{k_BT}\\
+    x_D&=\frac{\hbar\omega_D}{k_BT}=\frac{\Theta}{T}
+  \end{align}
+\end{equation}
+Immer noch Debye-Näherung:
+\begin{equation}
+  C_V=\left(\frac{\partial U}{\partial T}\right)_V=
+  9Nk_B\left(\frac{T}{\Theta}\right)^3\int_0^{x_D}\frac{x^4e^x}{(e^x-1)^2}dx
+\end{equation}
+Wärmetransport durch Gitterstöße:
+\begin{equation}
+  \bm{j}=-\Lambda\nabla T
+\end{equation}
+\begin{equation}
+  \Lambda=\frac{1}{3}Cvl
+\end{equation}
+Bei tiefen Temperaturen:
+\begin{equation}
+  \Lambda\propto T^3d
+\end{equation}
+\begin{equation}
+  \psi(\bm{r})=\frac{1}{\sqrt{V}}e^{i\bm{k}{r}}
+\end{equation}
+\begin{equation}
+  E=\frac{\hbar^2k^2}{2m}
+\end{equation}
+\begin{equation}
+  k_i=\frac{2\pi}{L}m_i
+\end{equation}
+\begin{equation}
+  \rho_k=\frac{2V}{(2\pi^3)}
+\end{equation}
+\begin{equation}
+  \mathcal{D}(E)=\frac{2V}{(2\pi^3)\hbar}\frac{4\pi k^2}{v_g}\overset{
+  v_g=\frac{\hbar k}{m}}{=}
+  \frac{V}{2\pi^2}\left( \frac{2m}{\hbar^2} \right)^{\frac{3}{2}}\sqrt{E}
+\end{equation}
+Zweidimensionale Zustandsdichte pro Volumen:
+\begin{equation}
+  D^{(2)}(E)=\frac{\rho_k^{(2)}}{A\hbar}\frac{2\pi k}{v_g}=\frac{m}{\pi\hbar^2}
+\end{equation}
+\begin{equation}
+  f(E)=\frac{1}{e^{\frac{(E-\mu)}{k_BT}}+1}
+\end{equation}
+\begin{equation}
+  n=\frac{N}{V}=\int_0^\infty D(E)f(E,T=0)dE=\int_0^{E_F}D(E)dE=\frac{1}{2\pi^2}
+  \left( \frac{2m}{\hbar^2}\right)^{\frac{3}{2}}\frac{2E_F^{\frac{3}{2}}}{3}
+\end{equation}
+\begin{equation}
+  \begin{align}
+    E_F&=\frac{\hbar^2}{2m}(3\pi^2n)^{\frac{2}{3}} \\
+    k_F&=(3\pi^2n)^{\frac{1}{3}}\quad &\text{Fermi-Wellenvektor} \\
+    v_F&=\frac{\hbar}{m}(3\pi^2n)^{\frac{1}{3}}\quad &\text{Fermi-Geschwindigkeit} \\
+    T_F&=\frac{E_F}{k_B}\quad &\text{Fermi-Temperatur}
+  \end{align}
+\end{equation}
+\begin{equation}
+  u_0=\int_0^\infty ED(E)f(E,T=0)dE=\int_0^{E_F}ED(E)dE=\frac{3n}{5}E_F=
+  \frac{3n}{5}k_BT_F
+\end{equation}
+\begin{equation}
+  \delta u(T)=u(T)-u_0=nk_BT\cdot\frac{T}{T_F}
+\end{equation}
+\begin{equation}
+  c_V^{el}=\left(\frac{\partial u}{\partial T}\right)_V\approx\frac{2nk_BT}{T_F}
+  \approx\gamma T
+\end{equation}
+\begin{equation}
+  c_V^{ges}=\gamma T + \begin{cases}
+  3n_Ak_B & \text{für } T>\Theta \\
+  \beta T^3 & \text{für } T\ll\Theta
+  \end{cases}
+\end{equation}
+Dispersionsrelation quasi-freie Elektronen:
+\begin{equation}
+  E_{\bm{K}}=\frac{\hbar^2k^2}{2m}=E_{\bm{k}+\bm{G}}=\frac{\hbar^2}{2m}
+  \abs{\bm{k}+\bm{G}}^2
+\end{equation}
+\begin{equation}
+  \frac{d\bm{v}}{dt}=\frac{1}{\hbar}\frac{d}{dt}\left(\frac{\partial E(\bm{k})}
+  {\partial\bm{k}}\right)=\frac{1}{\hbar}\frac{\partial^2E(\bm{k})}
+  {\partial\bm{k}\partial\bm{k}}\frac{\partial\bm{k}}{dt}=
+  \frac{1}{\hbar^2}\frac{\partial^2E(\bm{k})}
+  {\partial\bm{k}\partial\bm{k}}\bm{F}
+\end{equation}
+\begin{equation}
+  \left(\frac{1}{m^*}\right)_{ij}=\frac{1}{\hbar^2}\frac{\partial^2E(\bm{k})}
+  {\partial k_i\partial k_j}
+\end{equation}
+Bloch-Oszillationen:
+\begin{equation}
+  \abs{\bm{v}}=\frac{e\mathcal{E}}{\hbar}
+\end{equation}
+\begin{equation}
+  T_B=\frac{\frac{2\pi}{a}}{\frac{e\mathcal{E}}{\hbar}}=\frac{h}{ae\mathcal{E}}
+\end{equation}
+Drude Modell: Bewegung Elektronen $\iff$ Kinetische Gastheorie
+\begin{equation}
+  m\frac{d\bm{v}}{dt}=-e\mathcal{E}-m\frac{\bm{v}_d}{\tau}
+\end{equation}
+\begin{equation}
+  \bm{v}_d=-\frac{e\tau}{m}\bm{\mathcal{E}}=-\mu\bm{\mathcal{E}}
+\end{equation}
+\begin{equation}
+  \bm{j}=-en\bm{v}_d=\frac{ne^2\tau}{m}\bm{\mathcal{E}}=ne\mu\bm{\mathcal{E}}
+\end{equation}
+\begin{equation}
+  \sigma=\frac{j}{\mathcal{E}}=\frac{ne^2\tau}{m}=ne\mu
+\end{equation}
+\begin{equation}
+  l=v_F\tau
+\end{equation}
+\begin{equation}
+  \rho=\frac{1}{\sigma}=\frac{m}{ne^2\tau}=\rho_D+\rho_G=\frac{m}{ne^2\tau_D}+
+  \frac{m}{ne^2\tau_G(T)}
+\end{equation}
+\begin{equation}
+  \frac{\rho(300K)}{\rho(4.2K)}
+\end{equation}
+\begin{equation}
+  B_C(T)=B_C(0)\left[1-\left(\frac{T}{T_C}\right)^2\right]
+\end{equation}
+\begin{equation}
+  \sigma=e(n\mu_n+p\mu_p)
+\end{equation}
+\begin{equation}
+  \begin{align}
+    n&=\int_{E_L}^{\infty}D_L(E)f(E,T)dE\\
+    p&=\int_{-\infty}^{E_V}D_V(E)[1-f(E,T)]dE
+  \end{align}
+\end{equation}
+\begin{equation}
+  \begin{align}
+    D_L(E)&=\frac{1}{2\pi^2}\left(\frac{2m_n^*}{\hbar^2}\right)^{\frac{3}{2}}
+    \sqrt{E-E_L}\\
+    D_V(E)&=\frac{1}{2\pi^2}\left(\frac{2m_p^*}{\hbar^2}\right)^{\frac{3}{2}}
+    \sqrt{E_V-E}
+  \end{align}
+\end{equation}
+\begin{equation}
+  n=\int D_L(E)f(E)dE=\frac{1}{2\pi^2}\left(\frac{2m_n^*}{\hbar^2}\right)^
+  {\frac{3}{2}}e^{\frac{E_F}{k_BT}}\int_{E_L}^{\infty}\sqrt{E-E_L}
+  e^{\frac{E}{k_BT}}
+\end{equation}
+Massenwirkung:
+\begin{equation}\label{massenwirkung}
+  \begin{align}
+    n=&\mathcal{N}_Le^{-\frac{(E_L-E_F)}{k_BT}}\\
+    p=&\mathcal{N}_Ve^{\frac{(E_V-E_F)}{k_BT}}
+  \end{align}
+\end{equation}
+Für intrinsische Halbleiter:
+\begin{equation}
+  n\cdot p=\mathcal{N}_L\mathcal{N}_Ve^{-\frac{E_g}{k_BT}}
+\end{equation}
+\begin{equation}
+  n_i=p_i=\sqrt{\mathcal{N}_L\mathcal{N}_V}e^{-\frac{E_g}{2k_BT}}
+\end{equation}
+\begin{equation}
+  E_F=\frac{E_L+E_V}{2}+\frac{k_BT}{2}\ln(\frac{\mathcal{N}_V}{\mathcal{N}_L})
+  =\frac{E_L+E_V}{2}+\frac{3}{4}k_BT\ln(\frac{m^*_p}{m^*_n})
+\end{equation}
+Dotierte Halbleiter:
+
+
+
+
+
+
+\end{document}
