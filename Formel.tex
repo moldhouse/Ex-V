@@ -140,13 +140,16 @@ Zustandsdichte im reziproken Raum:
 \end{equation}
 Debye-Näherung $\omega=vq$:
 \begin{equation}
-  \mathcal{D}(\omega)d\omega=\rho_q\int_\omega^{\omega+dw}d^3q=\rho_qd\omega
-  \int_{\omega=const}\frac{dS_\omega}{v_g}=\rho_qd\omega\frac{4\pi q^2}{v_g}=
-  \frac{V}{2\pi^2}\frac{\omega^2}{v^3}d\omega
+  \mathcal{D}(\omega)=\frac{\partial N}{\partial k}\frac{\partial k}
+  {\partial \omega}=4\pi k^2\frac{V}{(2\pi)^3}\frac{1}{v_{ph}}=
+  \frac{V}{2\pi^2}\frac{\omega^2}{v^3}
 \end{equation}
 \begin{equation}
   U=\int_0^{\omega_D}\hbar\omega\mathcal{D}(\omega)\langle n(\omega,T)\rangle
   d\omega
+\end{equation}
+\begin{equation}
+  \omega_D=\frac{v}{a}\sqrt[3]{6\pi^2}
 \end{equation}
 \begin{equation}
   \begin{align}
@@ -158,7 +161,15 @@ Debye-Näherung $\omega=vq$:
 Immer noch Debye-Näherung:
 \begin{equation}
   C_V=\left(\frac{\partial U}{\partial T}\right)_V=
-  9Nk_B\left(\frac{T}{\Theta}\right)^3\int_0^{x_D}\frac{x^4e^x}{(e^x-1)^2}dx
+  9nk_B\left(\frac{T}{\Theta}\right)^3\int_0^{x_D}\frac{x^4e^x}{(e^x-1)^2}dx
+\end{equation}
+Für tiefe Temperature:
+\begin{equation}
+  C_V=3nk_B
+\end{equation}
+Für hohe Temperaturen:
+\begin{equation}
+  C_V=\frac{12\pi^4}{5}{nk_B}\left(\frac{T}{\Theta}\right)
 \end{equation}
 Wärmetransport durch Gitterstöße:
 \begin{equation}
@@ -180,17 +191,21 @@ Bei tiefen Temperaturen:
 \begin{equation}
   k_i=\frac{2\pi}{L}m_i
 \end{equation}
+Generell für Zustandsdichte:
 \begin{equation}
-  \rho_k=\frac{2V}{(2\pi^3)}
+  \mathcal{D}(E)=\frac{\partial N}{\partial k}\frac{\partial k}{\partial E}
+\end{equation}
+N ist jeweils Volumen mal Dichte:
+\begin{equation}
+  \begin{align}
+    N^{(3)}&=\frac{4}{3}\pi k^3\cdot\frac{2V}{(2\pi)^3} \\
+    N^{(2)}&=\pi k^2\cdot\frac{2A}{(2\pi)^2} \\
+    N^{(1)}&=2k\cdot\frac{2L}{2\pi}
+  \end{align}
 \end{equation}
 \begin{equation}
-  \mathcal{D}(E)=\frac{2V}{(2\pi^3)\hbar}\frac{4\pi k^2}{v_g}\overset{
-  v_g=\frac{\hbar k}{m}}{=}
-  \frac{V}{2\pi^2}\left( \frac{2m}{\hbar^2} \right)^{\frac{3}{2}}\sqrt{E}
-\end{equation}
-Zweidimensionale Zustandsdichte pro Volumen:
-\begin{equation}
-  D^{(2)}(E)=\frac{\rho_k^{(2)}}{A\hbar}\frac{2\pi k}{v_g}=\frac{m}{\pi\hbar^2}
+  \frac{\partial k}{\partial E}=\sqrt{\frac{m}{2\hbar^2}}\frac{1}{\sqrt{E}}=
+  \frac{m}{\hbar^2k}=\frac{1}{v_g\hbar}
 \end{equation}
 \begin{equation}
   f(E)=\frac{1}{e^{\frac{(E-\mu)}{k_BT}}+1}
@@ -208,6 +223,9 @@ Zweidimensionale Zustandsdichte pro Volumen:
   \end{align}
 \end{equation}
 \begin{equation}
+  e^{i\bm{q}\bm{r}}=e^{i\bm{q}(x+L,y,z)}=e^{i\bm{q}\bm{r}}\cdot e^{iq_xL}
+\end{equation}
+\begin{equation}
   u_0=\int_0^\infty ED(E)f(E,T=0)dE=\int_0^{E_F}ED(E)dE=\frac{3n}{5}E_F=
   \frac{3n}{5}k_BT_F
 \end{equation}
@@ -215,7 +233,7 @@ Zweidimensionale Zustandsdichte pro Volumen:
   \delta u(T)=u(T)-u_0=nk_BT\cdot\frac{T}{T_F}
 \end{equation}
 \begin{equation}
-  c_V^{el}=\left(\frac{\partial u}{\partial T}\right)_V\approx\frac{2nk_BT}{T_F}
+  c_V^{el}=\left(\frac{\partial u}{\partial T}\right)_V\approx\frac{\pi^2nk_BT}{2T_F}
   \approx\gamma T
 \end{equation}
 \begin{equation}
@@ -298,14 +316,18 @@ Drude Modell: Bewegung Elektronen $\iff$ Kinetische Gastheorie
 Massenwirkung:
 \begin{equation}\label{massenwirkung}
   \begin{align}
-    n=&\mathcal{N}_Le^{-\frac{(E_L-E_F)}{k_BT}}\\
-    p=&\mathcal{N}_Ve^{\frac{(E_V-E_F)}{k_BT}}
+    n=&\mathcal{N}_Le^{-\frac{(E_L-E_F)}{k_BT}}=
+    2\left(\frac{m_n^*k_BT}{2\pi\hbar^2}\right)^{\frac{3}{2}}
+    e^{-\frac{(E_L-E_F)}{k_BT}}\\
+    p=&\mathcal{N}_Ve^{\frac{(E_V-E_F)}{k_BT}}=
+    2\left(\frac{m_p^*k_BT}{2\pi\hbar^2}\right)^{\frac{3}{2}}
+    e^{\frac{(E_V-E_F)}{k_BT}}i
   \end{align}
 \end{equation}
-Für intrinsische Halbleiter:
 \begin{equation}
-  n\cdot p=\mathcal{N}_L\mathcal{N}_Ve^{-\frac{E_g}{k_BT}}
+  n\cdot p=\mathcal{N}_L\mathcal{N}_Ve^{-\frac{E_g}{k_BT}}=const
 \end{equation}
+Für intrinsische Halbleiter:
 \begin{equation}
   n_i=p_i=\sqrt{\mathcal{N}_L\mathcal{N}_V}e^{-\frac{E_g}{2k_BT}}
 \end{equation}
@@ -314,6 +336,37 @@ Für intrinsische Halbleiter:
   =\frac{E_L+E_V}{2}+\frac{3}{4}k_BT\ln(\frac{m^*_p}{m^*_n})
 \end{equation}
 Dotierte Halbleiter:
+\begin{equation}
+  \begin{align}
+    n_A&=n_A^0+n_A^-\\
+    n_D&=n_D^0+n_D^+
+  \end{align}
+\end{equation}
+\begin{equation}
+  n+n_A^-=p+n_D^+
+\end{equation}
+\begin{equation}
+  \frac{n_A^0}{n_A}=\frac{1}{e^{\frac{E_D-E_F}{k_BT}}+1}
+\end{equation}
+\begin{equation}
+  \frac{n_D^0}{n_D}=\frac{1}{e^{\frac{E_F-E_A}{k_BT}}+^}
+\end{equation}
+Supraleitung:
+\begin{equation}
+  B_C(T)=B_C(0)\left[1-\left(\frac{T}{T_C}\right)\right]
+\end{equation}
+\begin{equation}
+  I_C=\frac{B_C2\pi r}{\mu_0}
+\end{equation}
+\begin{equation}
+  rot\bm{B}=\mu_0\bm{j}
+\end{equation}
+\begin{equation}
+  \left|\bm{B}_z(r)\right|=B_z(0)e^{-\frac{r}{\lambda_l}}
+\end{equation}
+\begin{equation}
+  \left|\bm{j}\right|=\frac{B_z(0)}{\mu_0\lambda_l}e^{-\frac{r}{\lambda_l}}
+\end{equation}
 
 
 

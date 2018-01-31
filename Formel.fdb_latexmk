@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1516704285 "Formel.tex" "Formel.pdf" "Formel" 1516704288
+["pdflatex"] 1517418245 "Formel.tex" "Formel.pdf" "Formel" 1517418248
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1480098666 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/jknappen/ec/ecrm0600.tfm" 1480098696 3584 291a5713401683441e0a8c8f4417b17b ""
@@ -45,7 +45,6 @@
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1480098733 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb" 1480098733 35479 892d27442ef9ef29ce1ee57aa0e8a665 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1480098734 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
-  "/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb" 1480098734 35309 940e81a5b9e04201a07e8b33a3ae6e64 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb" 1480098737 164227 3df942b4ff2124425d8fb1b6d3e01c7a ""
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb" 1480098737 145929 f25e56369a345c4ff583b067cd87ce8e ""
   "/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1480098806 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -204,9 +203,9 @@
   "/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1495593472 2350277 a699055bee05bf8a40b0504752487295 ""
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1504384452 4129591 41719a1406833bc5cbfe30fd9593ab14 ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
-  "Formel.aux" 1516704286 220 cd50617f0b018a2d3bf1005edb5d4789 ""
-  "Formel.tex" 1516704274 9085 b2da6d4eb4248bc98732749b6ccbbf92 ""
+  "Formel.aux" 1517418247 220 b566f1d67155b02c60dbe8ed5ba44bbd ""
+  "Formel.tex" 1517418245 10473 882b1c0af176c36061007786e5040fa3 ""
   (generated)
-  "Formel.pdf"
   "Formel.log"
+  "Formel.pdf"
   "Formel.aux"
